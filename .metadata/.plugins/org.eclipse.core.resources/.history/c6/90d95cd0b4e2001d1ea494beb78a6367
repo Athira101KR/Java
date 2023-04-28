@@ -1,0 +1,34 @@
+package com.exam2.exceptionHandling;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+
+public class App {
+
+	public static void main(String[] args) throws ParseException {
+		// TODO Auto-generated method stub
+		Employee emp=new Employee();
+		SimpleDateFormat sdf=new SimpleDateFormat("dd-MM-yyyy");
+		try
+		{
+			Scanner sc=new Scanner(System.in);
+			Scanner scn=new Scanner(System.in);
+			Integer id=sc.nextInt();
+			emp.setId(id);
+			String name=scn.nextLine();
+			emp.setName(name);
+			
+				String dateOfBirth=sc.nextLine();
+				Date dob=sdf.parse(dateOfBirth);
+				emp.setDob(dob);
+			}
+			catch(InavlidDateOfBirthException ex)
+			{
+				System.out.println(ex.getMessage());
+			}
+	
+	}
+
+}

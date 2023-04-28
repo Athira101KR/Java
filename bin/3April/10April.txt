@@ -1,0 +1,16 @@
+			SDLC life cycle
+--------------------------------------------------------------------------------
+inception
+SDarrayellaboration
+coding
+testing
+
+Dploment
+maintenance
+
+--------
+models,
+1.waterfall model
+1.Iterative  and  spiral model
+3.V model
+4.Agile

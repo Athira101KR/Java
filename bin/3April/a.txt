@@ -1,0 +1,6 @@
+1)Inheritance
+2) Ecapsulation
+3)Abstraction
+4)Polymorphism
+
+	public, proteccted, default

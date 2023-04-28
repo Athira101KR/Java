@@ -1,0 +1,317 @@
+1.		Dice Game I
+
+Each player will be allowed to throw  a dice 2 times. The points for each player will be calculated as follows :
+If the values thrown are different, the points scored is equal to the sum of the 2 values.
+If the values thrown are the same, the points scored is equal to double the sum of the 2 values.
+
+Write a program to calculate the points scored by a player.
+Input and Output Format:
+Input consists of 2 integers. The valid range of inputs is from 0 to 6. [ Both 0 and 6 inclusive]
+Output the points scored. In case of invalid inputs, print “Invalid Input”.
+
+Refer sample input and output for formatting specificaions.
+[All text in bold corresponds to input and the rest corresponds to output.]
+Sample Input and Output 1:
+Enter Value 1:
+5
+Enter Value 2:
+6
+The points scored is 11
+
+Sample Input and Output 2:
+
+Enter Value 1:
+5
+Enter Value 2:
+5
+The points scored is  20
+
+Sample Input and Output 3:
+
+Enter Value 1:
+8
+Enter Value 2:
+6
+Invalid Input 
+
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int a,b;
+	    a=sc.nextInt();
+	    b=sc.nextInt();
+	 
+	  if(a<=6 && b<=6)
+	  {
+	    if(a==b)
+	    {
+	        System.out.println((a+b)*2);
+	    }
+	    else{
+	        System.out.println(a+b);
+	    }
+	  }
+	  else{
+	      System.out.println("invalid input");
+	      return;
+	  }
+	}
+}
+
+
+2		.Dice Game II
+
+Each player will be allowed to throw a dice 2 times. The points for each player will be calculated as follows :
+The points scored is the absolute difference between 8 and the sum of the 2 values, provided the sum of the 2 values is less than 8.
+In all other cases, the point  scored is double the absolute difference between 8 and the sum of the 2 values.
+
+Write a program to calculate the points scored by a player.
+
+Input and Output Format:
+Input consists of 2 integers. The valid range of inputs is from 0 to 6.
+Output the points scored. In case of invalid inputs, print “Invalid Input”.
+
+Refer sample input and output for formatting specificaions.
+
+[All text in bold corresponds to input and the rest corresponds to output.]
+Sample Input and Output 1:
+
+Enter Value 1:
+5
+Enter Value 2:
+6
+The points scored is 6
+
+Sample Input and Output 2:
+
+Enter Value 1:
+3
+Enter Value 2:
+2
+The points scored is  3
+
+Sample Input and Output 3:
+
+Enter Value 1:
+8
+Enter Value 2:
+6
+Invalid Input 
+
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int score;
+	    int a=sc.nextInt();
+	    int b=sc.nextInt();
+	    int sum=a+b;
+	   if(a<=6 && b<=6) 
+	   {
+    	    if(sum<8)
+    	    {
+    	        score=Math.abs(8-sum);
+    	    }
+    	    else{
+    	        score=Math.abs(8-sum)*2;
+    	    }
+    	    
+    	    System.out.println(score);
+	    }
+	    
+    	else
+    	{
+    	    System.out.println("invalid");
+    	}
+	}
+	
+}
+
+
+3.   		Array Product
+
+Write a program to find the product of all 2 digit numbers in an array.
+
+If the size of the input array is negative or if any of the input elements is negative , print “Invalid Input” and terminate the program.
+
+Input and Output Format:
+
+Input consists of n+1 integers. The first integer corresponds to n, the number of elements in the array. The next 'n' integers correspond to the elements in the array.
+Output consists of an integer that corresponds to the product.
+
+Refer sample output for formatting specifications.
+Assume that the maximum number of elements in the array is 20.
+
+Sample Input 1:
+6
+2
+7
+10
+3
+13
+100
+
+Sample Output 1:
+130
+
+Sample Input 2:
+-4
+
+Sample Output 2:
+Invalid Input
+
+Sample Input 3:
+4
+1
+-2
+
+Sample Output 3:
+Invalid Input 
+
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int n=sc.nextInt();
+	    int arr[]=new int[n];
+	    int product=1;
+	    if(n<0)
+	    {
+	         System.out.println("Invalid size");
+	         System.exit(0);
+	    }
+	    else
+	    {
+	         for(int i=0;i<n;i++)
+	        {
+	            arr[i]=sc.nextInt();
+	        }
+	        for(int i=0;i<n;i++)
+	        {
+	           if(arr[i]>=10 && arr[i]<100)
+	           {
+	               product*=arr[i];
+	           }
+	        }
+	    }
+	   System.out.println(product);
+	}
+	
+}
+
+
+4.
+
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    char ch=sc.next().charAt(0);
+	    char ch2=Character.toUpperCase(ch);
+	    
+	    switch(ch2)
+	    {
+	        case 'A':
+	            {System.out.println(ch2+" Is a vowel");
+	                break;
+	            }
+            case 'E':
+                {
+                    System.out.println(ch2+" Is a vowel");
+	                break;
+                }
+            case 'I':
+                {
+                    System.out.println(ch2+" Is a vowel");
+	                break;
+                }
+            case 'O':
+                {
+                    System.out.println(ch2+" Is a vowel");
+	                break;
+                }
+            case 'U':
+                {
+                    System.out.println(ch2+" Is a vowel");
+	                break;
+                }
+            default:
+                {
+                    System.out.println("Invalid choice");
+                    break;
+                }
+	    }
+	    
+	}
+	
+}
+
+
+5.
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int a=sc.nextInt();
+	    int b=sc.nextInt();
+	    if(a>b)
+	    {
+	        System.out.println("invalid input");
+	        System.exit(0);
+	    }
+	    while(a<b)
+	    {
+	        if(a%2==0)
+	        {
+	            System.out.println(a);
+	            a+=2;
+	            continue;
+	        }
+           a++;
+	    }
+	}
+	
+}
+
+6.

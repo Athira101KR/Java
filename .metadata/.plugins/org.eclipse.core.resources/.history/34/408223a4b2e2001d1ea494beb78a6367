@@ -1,0 +1,5 @@
+package com.exam2.exceptionHandling;
+
+public class InavlidDateOfBirthException extends Exception {
+
+}
