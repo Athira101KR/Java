@@ -1,0 +1,22 @@
+ER Diagram
+-------------------------------
+event_Table---
+	-event start date
+	-created_by: Which admin created the event(in case of multiple admins).
+	-created_at: The timestamp of when the event was created.
+	-updated_at: The timestamp of when the event was last updated.
+
+EventComment_Table---
+	-comment_id
+	-event_id(FK)
+	-user_id(FK)
+	-comment
+
+
+
+usecase
+------------------------------------------
+user-----
+	view task
+	update status
+	update task request

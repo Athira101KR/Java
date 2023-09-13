@@ -1,0 +1,9 @@
+2023-06-19 23:04:25 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO CUST VALUES(2,'AB,'BA[*]');"; SQL statement:
+INSERT INTO CUST VALUES(2,'AB,'BA'); [42000-214]
+2023-06-19 23:05:31 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRODUCTS" not found; SQL statement:
+SELECT * FROM PRODUCTS [42102-214]
+2023-06-19 23:07:18 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CUST_PRODUCT" not found; SQL statement:
+SELECT * FROM CUST_PRODUCT [42102-214]
